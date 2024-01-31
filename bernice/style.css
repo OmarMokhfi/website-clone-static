@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0;
+  padding: 6px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+.container {
+  max-width: 1500px;
+  margin-inline: auto;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.887);
+}
+.navbar nav *:not(.last) {
+  margin-left: 15px;
+}
+.btn {
+  justify-content: center;
+  padding: 10px 20px;
+  background: none;
+  outline: inherit;
+  border: 1px solid #616161f3;
+  border-radius: 24px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.hero {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+}
+.description {
+  text-align: center;
+}
+.hero-img {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.motivation {
+  background-color: #d1d1d142;
+}
+.motivation {
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+  text-align: center;
+  padding: 2em 1em;
+  margin: auto;
+  max-width: 70%;
+  min-height: 400px;
+  background: linear-gradient(to right, #d9d9d9, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+section.Soundsystems {
+  flex-direction: flex;
+  justify-content: center;
+}
+.Soundsystems-container {
+  display: flex;
+  justify-content: center;
+}
+.Soundsystems-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+}
+.Soundsystems-image {
+  width: 1;
+  overflow: hidden;
+}
