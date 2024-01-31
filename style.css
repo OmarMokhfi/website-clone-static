@@ -1,0 +1,94 @@
+/* 1- Remove padding and margin from html, body */
+/* 2- Add container to hold the whole website and give it a maximum width */
+/* 3- Find patterns to use and divide the webpage to elements */
+/* 4- Start with box model then find display to use then find elements that need positioning so you can start writing your HTML to fit the CSS for it */
+
+html,
+body {
+  margin: 0;
+  /* Adding internal white space */
+  padding: 6px;
+}
+
+.container {
+  /* For responsivity, the content should always stay inside the container in a specific width */
+  max-width: 1500px;
+  /* Center the container */
+  margin-inline: auto;
+}
+
+.hero {
+  width: 100%;
+  /* After adding elements inside remove the height because when screen gets smaller the height would change */
+  height: 500px;
+  background-color: beige;
+  border-radius: 12px;
+}
+
+.services {
+  width: 100%;
+  height: 500px;
+  background-color: red;
+  /* Shift the element to the top */
+  position: relative;
+  top: -20px;
+  /* make the element goes in front of the hero section instead of back */
+  z-index: -1;
+}
+
+.navbar {
+  /* To inline elements, default direction is row */
+  display: flex;
+  /* To add space between elements where each element goes to the extreme corner */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  color: red;
+}
+
+/* Adding outline to the text */
+/* -webkit works for chrome, for mozilla it's -moz */
+.navbar .logo span {
+  -webkit-text-stroke: 1px green;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Adding space to all elements except .last */
+.navbar nav *:not(.last) {
+  margin-right: 15px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.content h1 {
+  font-size: 56px;
+  margin-bottom: 0;
+}
+
+.content .images .img {
+  width: 220px;
+  height: 300px;
+  background-image: url("https://images.unsplash.com/photo-1588776814546-daab30f310ce?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  top: -10px;
+  rotate: -10deg;
+}
+
+/* The position of the button is relative to the parent (the image) */
+/* We make it absolute and the parent should be relative */
+.content .images .img button {
+  position: absolute;
+  top: 40px;
+  left: -30px;
+  rotate: 10deg;
+}
